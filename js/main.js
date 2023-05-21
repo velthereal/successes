@@ -5,8 +5,9 @@ for(let i = 0; i < 10; i++){
 	console.log(`Оцінка ${i + 1} : ${grades[i]} \n`);
 }
 
-// while(true){
-	let choice = +prompt(`Виберіть варіант \n1. Вивід оцінок \n2. Перездача іспиту \n3. Чи виходить стипендія \n0. Вихід`);
+let choice;
+do {
+	choice = +prompt(`Виберіть варіант \n1. Вивід оцінок \n2. Перездача іспиту \n3. Чи виходить стипендія \n0. Вихід`);
 	switch (choice) {
 		case 1:
 			for(let i = 0; i < grades.length; i++){
@@ -42,7 +43,4 @@ for(let i = 0; i < 10; i++){
 			alert(`Невірний варіант. Спробуйте ще раз.`);
 			break;
 	}
-	// if(choice == 0){
-	// 	break;
-	// }
-// }
+} while (choice != 0);
