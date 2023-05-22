@@ -10,19 +10,13 @@ do {
 	choice = +prompt(`Виберіть варіант \n1. Вивід оцінок \n2. Перездача іспиту \n3. Чи виходить стипендія \n0. Вихід`);
 	switch (choice) {
 		case 1:
-			for(let i = 0; i < grades.length; i++){
-				document.write(`Оцінка ${i + 1} : ${grades[i]} <br>`);
-			}
+			alert(`Оцінки: ${grades}`);
 			break;
 		case 2:
 			let index = +prompt(`Введіть номер оцінки, яку потрібно змінити`);
 			let newMark = +prompt(`Введіть нову оцінку`);
 			grades[index-1] = newMark;
-			document.write(`Оцінка номер ${index} була змінена на ${newMark} <br>`);
-
-			for(let i = 0; i < grades.length; i++){
-				document.write(`Оцінка ${i + 1} : ${grades[i]} <br>`);
-			}
+			alert(`Оцінка номер ${index} була змінена на ${newMark}`);
 			break;
 		case 3:
 			let sum = 0;
@@ -31,9 +25,9 @@ do {
 			}
 			let avr = sum / grades.length;
 			if(avr >= 10.7){
-				document.write(`Студент отримує стипендію`);
+				alert(`Студент отримує стипендію`);
 			} else{
-				document.write(`Студент не отримує стипендію`);
+				alert(`Студент не отримує стипендію`);
 			}
 			break;
 		case 0:
